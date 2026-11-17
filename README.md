@@ -60,6 +60,7 @@ www.youtube.com##ytd-watch-next-secondary-results-renderer
 www.youtube.com##ytd-secondary
 m.youtube.com##ytd-watch-next-secondary-results-renderer
 m.youtube.com##.full-bleed-wn-thumbs.watch-content > .single-column-watch-next-modern-panels.scwnr-content > lazy-list
+www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-scope:nth-of-type(2)
 ```
 # ИНСТРУКЦИЯ НЕДОДЕЛАНА, ДАЛЕЕ БЕСПОЛЕЗНЫЙ ШАБЛОН ОТ ИИШКИ
 ### Шаг 1. Откройте панель управления uBlock Origin
