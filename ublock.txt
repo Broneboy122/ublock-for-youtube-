@@ -1,0 +1,54 @@
+! ГЕНЕРАЛЬНАЯ ЗАЧИСТКА SHORTS (ВЕРСИЯ 3.0)
+
+! 1. БЛОКИРУЕМ ПО КЛЮЧЕВЫМ СЛОВАМ (самое надежное)
+www.youtube.com##[class*="shorts"]:upward(ytd-rich-item-renderer)
+www.youtube.com##[id*="shorts"]:upward(ytd-rich-item-renderer)
+www.youtube.com##[class*="Shorts"]:upward(ytd-rich-item-renderer)
+www.youtube.com##[class*="reel"]:upward(ytd-rich-item-renderer)
+www.youtube.com##[id*="reel"]:upward(ytd-rich-item-renderer)
+
+! 2. БЛОКИРУЕМ ВСЕ ИЗВЕСТНЫЕ КОНТЕЙНЕРЫ
+www.youtube.com##ytd-rich-section-renderer
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytd-shorts
+www.youtube.com##ytd-reel-item-renderer
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Shorts))
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Шортсы))
+
+! 3. БЛОКИРУЕМ ПО ССЫЛКАМ
+www.youtube.com##a[href*="/shorts/"]:upward(ytd-rich-item-renderer)
+www.youtube.com##a[href*="/shorts/"]:upward(ytd-grid-video-renderer)
+www.youtube.com##a[href*="/shorts/"]:upward(ytd-video-renderer)
+www.youtube.com##ytd-thumbnail[href*="/shorts/"]:upward(ytd-rich-item-renderer)
+
+! 4. БЛОКИРУЕМ В МЕНЮ
+www.youtube.com##ytd-guide-entry-renderer:has(*:is-text(Shorts))
+www.youtube.com##ytd-guide-entry-renderer:has(*:is-text(Шортсы))
+www.youtube.com##ytd-guide-section-renderer:has(*:is-text(Shorts))
+www.youtube.com##ytd-guide-section-renderer:has(*:is-text(Шортсы))
+
+! 5. БЛОКИРУЕМ ПО АТРИБУТАМ
+www.youtube.com##[title*="Shorts"]:upward(ytd-guide-entry-renderer)
+www.youtube.com##[title*="Шортсы"]:upward(ytd-guide-entry-renderer)
+www.youtube.com##[aria-label*="Shorts"]:upward(ytd-guide-entry-renderer)
+www.youtube.com##[aria-label*="Шортсы"]:upward(ytd-guide-entry-renderer)
+
+! 6. МОБИЛЬНАЯ ВЕРСИЯ
+m.youtube.com##[class*="shorts"]
+m.youtube.com##[class*="Shorts"]
+m.youtube.com##[class*="reel"]
+m.youtube.com##ytm-shorts
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##a[href*="/shorts/"]
+
+! 7. БЛОКИРУЕМ ПЛЕЕР
+www.youtube.com##[class*="shorts-player"]
+www.youtube.com##[class*="shorts-lockup"]
+
+! 8. ВК (ПОЛНОСТЬЮ)
+vk.com##[class*="clip"]
+vk.com##[class*="Clip"]
+vk.com##[href*="/clip"]
+vk.com##[data-ads-label="clip"]
+m.vk.com##[class*="clip"]
+
