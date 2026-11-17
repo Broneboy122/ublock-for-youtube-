@@ -1,10 +1,10 @@
 # Вырезание Shorts и затягивающей ленты из YouTube с помощью uBlock
 
+
 Набор пользовательских фильтров для полного удаления Shorts из YouTube.   
 Решение работает на уровне браузера, не требует сторонних приложений.
 
 ---
-
 ## Что делает набор
 
 - Полностью скрывает блок Shorts с главной страницы YouTube.
@@ -14,10 +14,13 @@
 - Не затрагивает домены `googlevideo.com` и основной API плеера — совместимо с ByeDPI и другими DPI-обходчиками.
 
 ---
-
 ## Требования
-На ПК подхлдят любой браузер, как на базе Chromium так и Firefox.
-На телефоне необходим браузер, поддерживающий расширения. На базе Chromium это: Microsoft Edge, Samsung Internet, Яндекс Браузер. На базе Firefox подойдёт практически любой браузер (Firefox, WebLibre, Fennec, IronFox, Iceraven, Waterfox, Tor Browser)
+### На ПК подходит любой браузер.
+### На телефоне необходим браузер, поддерживающий расширения: 
+##### На базе Chromium: 
+- Microsoft Edge, Samsung Internet, Яндекс Браузер.
+##### На базе Firefox:
+- Firefox, WebLibre, Fennec, IronFox, Iceraven, Waterfox, Tor Browser
 
 > **Важно:** uBlock Origin Lite (версия для Chrome Web Store после перехода на Manifest V3) поддерживает только базовые фильтры. Для полной функциональности рекомендуется классический uBlock Origin, доступный для бразеров на базе Firefox.
 
