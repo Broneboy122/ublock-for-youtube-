@@ -1,10 +1,8 @@
-! ================= СЕТЬ (блокировка загрузки Shorts / API ленты) =================
-! Это ломает бесконечный свайп и подгрузку следующего shorts даже по прямой ссылке.
+
 ||youtube.com/youtubei/v1/reel/$xhr
 ||youtube.com/s/player/*/shorts_$script
 ||youtube.com/s/desktop/*/shorts_$script
 
-! ================= КОСМЕТИКА: www.youtube.com =================
 www.youtube.com##ytd-rich-section-renderer
 www.youtube.com##ytd-reel-shelf-renderer
 www.youtube.com##ytd-shorts
@@ -20,7 +18,6 @@ www.youtube.com##ytd-guide-entry-renderer:has-text(Шортсы)
 www.youtube.com##ytd-guide-entry-renderer[title="Shorts"]
 www.youtube.com##ytd-guide-entry-renderer[title="Шортсы"]
 
-! ================= КОСМЕТИКА: m.youtube.com =================
 m.youtube.com##ytd-rich-section-renderer
 m.youtube.com##ytd-reel-shelf-renderer
 m.youtube.com##ytd-shorts
@@ -33,27 +30,6 @@ m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
 m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Шортсы)
 m.youtube.com##a[href*="/shorts/"]
 
-! ================= ВК: vk.com =================
-vk.com##[class*="clip"]:upward(1)
-vk.com##[class*="Clip"]:upward(1)
-vk.com##[href*="/clip"]
-vk.com##[data-ads-label="clip"]
-vk.com##.VideoCarousel__clips
-vk.com##.ClipsCarousel
-vk.com##.clips_feed_block
-
-! ================= ВК: m.vk.com =================
-m.vk.com##[class*="clip"]:upward(1)
-m.vk.com##[class*="Clip"]:upward(1)
-m.vk.com##[href*="/clip"]
-m.vk.com##.clips_item
-m.vk.com##.clips_feed
-
-! ================= ДОПОЛНИТЕЛЬНО: правый блок рекомендаций на странице просмотра =================
-! Это ровно то, что вы просили в самом начале: убрать правую «ленту видео» целиком,
-! чтобы при просмотре лекции справа не было ничего.
-! ВНИМАНИЕ: скрывает ВСЕ связанные видео, включая полезные — отключите эти две строки,
-! если хотите оставить правую колонку, но без shorts.
 www.youtube.com##ytd-watch-next-secondary-results-renderer
 www.youtube.com##ytd-secondary
 m.youtube.com##ytd-watch-next-secondary-results-renderer
