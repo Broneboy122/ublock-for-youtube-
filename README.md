@@ -49,7 +49,39 @@
 Скопируйте содержимое файла [`filters.txt`](filters.txt) и вставьте его в поле «Мои фильтры».
 
 ![Поле ввода фильтров](images/03-my-filters.png)
-
+```code
+||youtube.com/youtubei/v1/reel/$xhr
+||youtube.com/s/player/*/shorts_$script
+||youtube.com/s/desktop/*/shorts_$script
+www.youtube.com##ytd-rich-section-renderer
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytd-shorts
+www.youtube.com##ytd-reel-item-renderer
+www.youtube.com##ytd-rich-item-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-grid-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-compact-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Shorts))
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Шортсы))
+www.youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+www.youtube.com##ytd-guide-entry-renderer:has-text(Шортсы)
+www.youtube.com##ytd-guide-entry-renderer[title="Shorts"]
+www.youtube.com##ytd-guide-entry-renderer[title="Шортсы"]
+m.youtube.com##ytd-rich-section-renderer
+m.youtube.com##ytd-reel-shelf-renderer
+m.youtube.com##ytd-shorts
+m.youtube.com##ytd-reel-item-renderer
+m.youtube.com##ytd-rich-item-renderer:has(a[href*="/shorts/"])
+m.youtube.com##ytd-compact-video-renderer:has(a[href*="/shorts/"])
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-shorts
+m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
+m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Шортсы)
+m.youtube.com##a[href*="/shorts/"]
+www.youtube.com##ytd-watch-next-secondary-results-renderer
+www.youtube.com##ytd-secondary
+m.youtube.com##ytd-watch-next-secondary-results-renderer
+```
 ### Шаг 5. Примените изменения
 
 Нажмите кнопку **Применить изменения** в левом верхнем углу. Убедитесь, что счётчик ошибок в правом верхнем углу показывает **0**.
