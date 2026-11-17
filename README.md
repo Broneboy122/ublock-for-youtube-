@@ -34,7 +34,7 @@
 
 ### Шаг 0. Удаление истории просмотров
 
-| ![Шаг 1](screenshot-2026-11-17_16-17-10.png) | ![Шаг 2](screenshot-2026-11-17_16-27-35.png) |
+| ![Шаг 1](1.png) | ![Шаг 2](2.png) |
 |:---:|:---:|
 | **Шаг 1. «Вы» → «История»** | **Шаг 2. «Очистить» и «Не сохранять»** |
 
@@ -45,7 +45,9 @@
 
 В завимости от ядра вашего браузера, установка осуществляется из магазина расширений [Chrome](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=ru) или [Firefox](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) 
 
-
+| ![Шаг 1](4.png) | ![Шаг 2](3.png) |
+|:---:|:---:|
+| **В браузерах на базе Chromium** | **В браузерах на базе Firefox** |
 
 ### Шаг 2. Перейдите на вкладку «Мои фильтры»
 
