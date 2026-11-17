@@ -1,58 +1,59 @@
-! =================================================================
-! СТАБИЛЬНЫЙ НАБОР ФИЛЬТРОВ uBlock Origin (v4.0)
-! Исключены правила redirect (вызывавшие ошибки).
-! Исключена блокировка googlevideo.com (для совместимости с ByeDPI).
-! =================================================================
-
-! 1. СЕТЕВАЯ БЛОКИРОВКА (Только специфичные API Shorts, без влияния на обычные видео)
+! ================= СЕТЬ (блокировка загрузки Shorts / API ленты) =================
+! Это ломает бесконечный свайп и подгрузку следующего shorts даже по прямой ссылке.
 ||youtube.com/youtubei/v1/reel/$xhr
 ||youtube.com/s/player/*/shorts_$script
 ||youtube.com/s/desktop/*/shorts_$script
 
-! 2. УНИВЕРСАЛЬНАЯ КОСМЕТИЧЕСКАЯ БЛОКИРОВКА (ПК и Mobile Web)
-! Скрывает любые контейнеры, содержащие ключевые слова в классах или ID
-www.youtube.com, m.youtube.com##[class*="shorts"]:upward(1)
-www.youtube.com, m.youtube.com##[class*="Shorts"]:upward(1)
-www.youtube.com, m.youtube.com##[class*="reel"]:upward(1)
-www.youtube.com, m.youtube.com##[id*="shorts"]:upward(1)
-www.youtube.com, m.youtube.com##[id*="reel"]:upward(1)
-
-! 3. ТОЧЕЧНОЕ УДАЛЕНИЕ ЭЛЕМЕНТОВ ИНТЕРФЕЙСА
-! Главная страница, поиск и рекомендации
-www.youtube.com, m.youtube.com##ytd-rich-section-renderer
-www.youtube.com, m.youtube.com##ytd-reel-shelf-renderer
-www.youtube.com, m.youtube.com##ytd-shorts
-www.youtube.com, m.youtube.com##ytd-reel-item-renderer
-www.youtube.com, m.youtube.com##ytd-rich-item-renderer:has-text(Shorts)
-www.youtube.com, m.youtube.com##ytd-rich-item-renderer:has-text(Шортсы)
-
-! Скрытие превью и ссылок, ведущих на Shorts (невозможно кликнуть)
-www.youtube.com, m.youtube.com##a[href*="/shorts/"]:upward(ytd-rich-item-renderer)
-www.youtube.com, m.youtube.com##a[href*="/shorts/"]:upward(ytd-grid-video-renderer)
-www.youtube.com, m.youtube.com##a[href*="/shorts/"]:upward(ytd-video-renderer)
-www.youtube.com, m.youtube.com##ytd-thumbnail[href*="/shorts/"]:upward(1)
-
-! 4. УДАЛЕНИЕ КНОПКИ SHORTS ИЗ МЕНЮ НАВИГАЦИИ
+! ================= КОСМЕТИКА: www.youtube.com =================
+www.youtube.com##ytd-rich-section-renderer
+www.youtube.com##ytd-reel-shelf-renderer
+www.youtube.com##ytd-shorts
+www.youtube.com##ytd-reel-item-renderer
+www.youtube.com##ytd-rich-item-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-grid-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-compact-video-renderer:has(a[href*="/shorts/"])
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Shorts))
+www.youtube.com##ytd-rich-item-renderer:has(span:has-text(Шортсы))
 www.youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
 www.youtube.com##ytd-guide-entry-renderer:has-text(Шортсы)
 www.youtube.com##ytd-guide-entry-renderer[title="Shorts"]
 www.youtube.com##ytd-guide-entry-renderer[title="Шортсы"]
+
+! ================= КОСМЕТИКА: m.youtube.com =================
+m.youtube.com##ytd-rich-section-renderer
+m.youtube.com##ytd-reel-shelf-renderer
+m.youtube.com##ytd-shorts
+m.youtube.com##ytd-reel-item-renderer
+m.youtube.com##ytd-rich-item-renderer:has(a[href*="/shorts/"])
+m.youtube.com##ytd-compact-video-renderer:has(a[href*="/shorts/"])
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-shorts
 m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
 m.youtube.com##ytm-pivot-bar-item-renderer:has-text(Шортсы)
+m.youtube.com##a[href*="/shorts/"]
 
-! 5. БЛОКИРОВКА VK КЛИПОВ (ПК и Mobile)
-vk.com, m.vk.com##[class*="clip"]:upward(1)
-vk.com, m.vk.com##[class*="Clip"]:upward(1)
-vk.com, m.vk.com##[href*="/clip"]
-vk.com, m.vk.com##[data-ads-label="clip"]
-vk.com, m.vk.com##.VideoCarousel__clips
-vk.com, m.vk.com##.ClipsCarousel
-vk.com, m.vk.com##.clips_feed_block
+! ================= ВК: vk.com =================
+vk.com##[class*="clip"]:upward(1)
+vk.com##[class*="Clip"]:upward(1)
+vk.com##[href*="/clip"]
+vk.com##[data-ads-label="clip"]
+vk.com##.VideoCarousel__clips
+vk.com##.ClipsCarousel
+vk.com##.clips_feed_block
 
-! 6. АНТИ-ЗАЛИПАНИЕ (Для прямых ссылок от друзей)
-! Скрывает элементы управления и навигации внутри плеера Shorts. 
-! Страница может открыться, но интерфейс переключения, лайков и свайпа будет сломан/скрыт, 
-! что делает бесконечный просмотр невозможным, не блокируя загрузку самой страницы.
-www.youtube.com, m.youtube.com##.shorts-player .reel-player-header
-www.youtube.com, m.youtube.com##.shorts-player .reel-player-controls
-www.youtube.com, m.youtube.com##.shorts-player .reel-player-engagement-panel
+! ================= ВК: m.vk.com =================
+m.vk.com##[class*="clip"]:upward(1)
+m.vk.com##[class*="Clip"]:upward(1)
+m.vk.com##[href*="/clip"]
+m.vk.com##.clips_item
+m.vk.com##.clips_feed
+
+! ================= ДОПОЛНИТЕЛЬНО: правый блок рекомендаций на странице просмотра =================
+! Это ровно то, что вы просили в самом начале: убрать правую «ленту видео» целиком,
+! чтобы при просмотре лекции справа не было ничего.
+! ВНИМАНИЕ: скрывает ВСЕ связанные видео, включая полезные — отключите эти две строки,
+! если хотите оставить правую колонку, но без shorts.
+www.youtube.com##ytd-watch-next-secondary-results-renderer
+www.youtube.com##ytd-secondary
+m.youtube.com##ytd-watch-next-secondary-results-renderer
