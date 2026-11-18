@@ -49,7 +49,7 @@
 ---
 ### Шаг 1. 
 - Установка uBlock
-В завимости от ядра вашего браузера, установка осуществляется из магазина расширений [Chrome](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=ru) или [Firefox](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/).
+В завимости от ядра вашего браузера, осуществляется из магазина расширений [Chrome](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=ru) или [Firefox](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/).
 
 | ![1](4.png) | ![2](3.png) |
 |:---:|:---:|
@@ -97,6 +97,7 @@ www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-sco
 ```
 </details> и вставить в поле, нажать "Применить измения"
 
+
 | ![1](5.png) | ![2](6.png) | ![3](7.png) | ![4](8.png) |
 |:---:|:---:|:---:|:---:|
 | **Вход в панель** | **Вкладка "Мои фильтры"** | **Вставка** | **Применение** |
@@ -104,6 +105,6 @@ www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-sco
 ---
 # Итог
 ### В интерфейсе остаются видео только из подписок и прямого поиска, что сокращает возможность траты времени на листание ленты. 
-#### Применение полного списка и удаление истории просмотров исключительно по желанию. Автор репозитория не несёт ответственности за ваши дейтсвия и недостижение результата. 
+#### Применение полного списка филтров и удаление истории просмотров исключительно по желанию. Автор репозитория не несёт ответственности за ваши дейтсвия и недостижение результата. 
 
 
