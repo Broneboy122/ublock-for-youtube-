@@ -57,12 +57,10 @@
 
 ### Шаг 2.  
 
----
+<details>
+<summary>Нажми, чтобы увидеть и скопировать набор фильтров</summary>
 
-## Содержимое filters.txt
-
-Ниже — актуальная версия набора фильтров. Блок кода ниже автоматически имеет кнопку копирования в правом верхнем углу на странице GitHub.
-```code
+```text
 ||youtube.com/youtubei/v1/reel/$xhr
 ||youtube.com/s/player/*/shorts_$script
 ||youtube.com/s/desktop/*/shorts_$script
@@ -97,3 +95,17 @@ m.youtube.com##ytd-watch-next-secondary-results-renderer
 m.youtube.com##.full-bleed-wn-thumbs.watch-content > .single-column-watch-next-modern-panels.scwnr-content > lazy-list
 www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-scope:nth-of-type(2)
 ```
+</details>
+
+| ![1](5.png) | ![2](6.png) | ![3](7.png) | ![4](8.png) |
+|:---:|:---:|:---:|:---:|
+
+
+## Содержимое filters.txt
+
+Ниже — актуальная версия набора фильтров. Блок кода ниже автоматически имеет кнопку копирования в правом верхнем углу на странице GitHub.
+```code
+
+```
+
+
