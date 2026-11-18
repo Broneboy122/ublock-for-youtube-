@@ -28,7 +28,7 @@
 | **Android** | Microsoft Edge, Samsung Internet, Яндекс Браузер | Firefox, WebLibre, Fennec, IronFox, Iceraven, Waterfox, Tor Browser |
 
 
-> На пк практически каждый браузер имеет поддержку расширений, поэтому округлено до любого.
+> На ПК практически каждый браузер имеет поддержку расширений, поэтому округлено до любого.
 
 > Как оно там на устройствах яблок, понятия не имею. На Linux всё аналогично с Windows.
 
@@ -46,17 +46,17 @@
 
 > Необходимо для отключения функции рекомендаций видео. После этого на главном экране больше не будет ленты.
 
-
+---
 ### Шаг 1. 
 - Установка uBlock
-В завимости от ядра вашего браузера, установка осуществляется из магазина расширений [Chrome](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=ru) или [Firefox](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) 
+В завимости от ядра вашего браузера, установка осуществляется из магазина расширений [Chrome](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh?hl=ru) или [Firefox](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/).
 
 | ![1](4.png) | ![2](3.png) |
 |:---:|:---:|
 | **В браузерах на базе Chromium** | **В браузерах на базе Firefox** |
-
+---
 ### Шаг 2.  
-
+Вход в панель управления в каждом браузере осуществляется по-разному, далее покаано на примере браузера Floorp. В панели управления необходимо перейти в "Мои фильтры", скопироравть фильтры
 <details>
 <summary>Нажми, чтобы увидеть и скопировать набор фильтров</summary>
 
@@ -95,17 +95,15 @@ m.youtube.com##ytd-watch-next-secondary-results-renderer
 m.youtube.com##.full-bleed-wn-thumbs.watch-content > .single-column-watch-next-modern-panels.scwnr-content > lazy-list
 www.youtube.com##ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer.style-scope:nth-of-type(2)
 ```
-</details>
+</details> и вставить в поле, нажать "Применить измения"
 
 | ![1](5.png) | ![2](6.png) | ![3](7.png) | ![4](8.png) |
 |:---:|:---:|:---:|:---:|
+| **Вход в панель** | **Вкладка "Мои фильтры"** | **Вставка** | **Применение** |
 
-
-## Содержимое filters.txt
-
-Ниже — актуальная версия набора фильтров. Блок кода ниже автоматически имеет кнопку копирования в правом верхнем углу на странице GitHub.
-```code
-
-```
+---
+# Итог
+### В интерфейсе остаются видео только из подписок и прямого поиска, что сокращает возможность траты времени на листание ленты. 
+#### Применение полного списка и удаление истории просмотров исключительно по желанию. Автор репозитория не несёт ответственности за ваши дейтсвия и недостижение результата. 
 
 
